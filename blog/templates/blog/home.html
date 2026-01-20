@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog de Lilian</title>
+</head>
+<body>
+    <h1>Blog de Lilian</h1>
+    <hr>
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <small>Posted on {{ post.date_posted|date:"F j, Y, g:i a" }}</small>
+        <p>{{ post.content|truncatechars:150  }}</p>
+	<a href="{% url 'article_det' post.id %}">See more</a>
+        <hr>
+    {% empty %}
+        <p>No blog posts yet!</p>
+    {% endfor %}
+</body>
+</html>
