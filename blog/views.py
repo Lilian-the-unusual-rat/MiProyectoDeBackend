@@ -73,3 +73,9 @@ def login_api(request):
         token = secrets.token_hex(16)
 
         return JsonResponse({"token": token})
+
+def deploy_test(request):
+    return JsonResponse({
+        "status": "ok",
+        "message": "Deploy automatico funcionando.",
+    })

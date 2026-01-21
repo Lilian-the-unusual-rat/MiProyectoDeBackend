@@ -7,4 +7,5 @@ urlpatterns = [
     path('api/posts/', views.posts_list),
     path('api/posts/<int:id>/', views.post_detail),
     path('api/login/', views.login_api),
+    path('api/deploy-test/', views.deploy_test),
 ]
